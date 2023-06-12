@@ -1,0 +1,90 @@
+										*********GIT & GITHUB Part 1*********
+Q1.what is git ?
+ANS:git is an open-source distribute version control system. it is designed to handle minor 
+	to major projects with high speed and efficiency.it developed to co-ordinate the work among 
+	the developers.the version control allows us to track and work together with our team members at 
+	the same workspace.
+
+Q2.what do you understand by the term 'version control system' ?
+ANS: a version control system is a software that tracks changes to a file or set over time so that you can recall
+	specific versions later.it also allows you to work together with other programmers.
+
+	the version control system is a collection of software tools that help a team to manage changes in a source code.
+	it uses a special kind of database to keep track of every modification to the code.
+
+Q3.what is github ?
+Ans:github is an immense platform for code hosting it supports version controlling and collaboration and allows developers
+	to work together on projects. it offers both distributed version and source code mangement  (SKM) functionality of
+	git. it also facilitates collaboration featuare such as bug tracking requests,task management for every project.
+	
+	Essential computers of the GitHub are:
+			*Repositories
+			*Branches
+			*commits
+			*Pull requests
+			*Git(the version control tool GitHub is built on)
+
+
+ Q4.mention some popular Git Hosting services ?
+ANS: some popular git Hosting services :-
+		
+		*Bitbucket
+		*GitHub
+		*GitLab
+		*Microsoft Visual Stual Team Services
+		*Perforce
+		
+
+Q5.Dfifferant type of version control system ?
+ANS:Git,being a distributed version control system, has different features and workflow that can be used to manage version of code.
+	Here are some different types of version control system (VCS).
+
+		*Centralized version control system (CVCS) .
+		*Distributed Version Control System (DVCS) .
+		*Branching And Merging.
+		*Forking and Pull Requests.
+		*Git Workflow Petterns.
+		
+
+Q6.What is benifit comes whit using Git ?
+ANS:  Using git, a distributed vesion control system, offers several benefit for software development and collaboration.
+	here are some of the key advantages.
+
+		1.Version Control .
+		2.Collaboration and Teamwork.
+		3.Branching and Merging.
+		4.Flexibility and Speed.
+		5.Backup and Recovery.
+		6.Code Reviews and Auditing.
+		7.Open Source Collaboration.
+		8.Integration and Ecosystem.
+
+Q7.what is a git repository ?
+ANS: A git repository, often referred to simply as a repo, i s a data structure that stores the filles, directories, and the entire history of a 
+	project managed with git.it serves as a central storage location for all the version of the project's files, as well as the metadata and 
+	commit history associated with those files.
+
+		1.Working Directory.
+		2.Staging Area/Index
+		3.Commits.
+		4.Branches.
+		5.Remote Repository.
+		6.Clon.
+		7.Pull and Push.
+		
+
+Q8.how you can initialized a repository  in git ?
+ANS: 1. Open your command line or terminal
+
+	2.navigate to the directory where you want to create the repository you can 
+	   used the 'cd' command to change directories. for example, if you want to create the 
+	    repository in the "documents" folder, you would use the command 'cd' .
+
+	3.once you're in the desired directory,run the following command to initialize the git
+	    repository :git init 
+
+	4.After running the ' git init ' commond, you should see an output similar to : -
+
+		Initialized empty git repository in /path/to/repository/.git/
+
+	    this indicates that the repository has been successful initialized .

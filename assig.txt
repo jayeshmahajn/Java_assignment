@@ -1,0 +1,190 @@
+										************computer basic assignment************
+
+Q1:what is computer?
+ANS :computer is a electonic device,computer is collection of different type of programm storing and processing data typically in binary.
+
+Q2:what is ram?
+ANS :ram which stand for random access memory,ram is a hardware device located on the motherboard of computer it store data,program and profram rusults when 
+     computer is switch ON is acts like internal memory of cpu.
+
+Q3:where is data store in a computer?
+ANS :computer data store in center proccessing unit(CPU).
+
+Q4: what is that input device used to type text and numbers on document in the computer system?
+ANS :keyboard.
+
+Q5:what are the output devices?
+ANS :output device are :monitor,printer,etc..
+
+Q6:which is the input device that allows a user to move the cursor or printer on the screen?
+ANS :mouse.
+
+Q7:which language is directly understood by the computer without a transiation program?
+ANS :machine language or machine code is a low-level language composed of binary digits (ones of zeros).
+
+Q8:what are input devices?
+ANS :input device are: keyboard,mouse,joystick.
+
+
+
+
+
+										**************Fundamentals of Java************
+
+
+Q1:what is programming language?
+ANS :programming is a practice that strengthens our capacity for logical thought and problem-solving.it teaches 
+	us how to carry out a task whit the aid of software or a computer program.programming is help to interact
+	with computer.
+
+
+Q2:why do we need a programming language?
+ANS: programming language it is vocabulary and a collection of rule that command a computer,devices,
+	application to work according to the written codes.the programming language enables us to write 
+	efficient programs and develop online  solutions such as-mobile applications,weba applications,and
+	games,etc.programming is used to automate,maintain,assemble,measure,and interpret the processing
+	of the data and information.
+
+
+Q3:features of java?
+ANS: * object-oriented-the featuares of object-oriented programming are supported by java.its object model is
+	straightforward and fixible.
+
+	* platform independent-because java and c++ are platform indenpendent,application programs created in
+	one operating system can run on any other operating system.c and c++,however,are platform dependent 
+	languages,making it impossible for application programs created int one operating system to run in
+	any other oparating system.
+	
+	* simple-because java incorporates many c/c++ capabilities,it is simple to understand.
+
+	* secure-java offers a variety of defences against malware and viruses.it guarantees that neither damage
+	nor security will be compromised.
+
+	*portable-we have the idea of portability in java.java allows the same software to run on various platforms.
+
+	*multi-threaded-java's multithreading programming capability enables during program development.
+	executes multiple tasks concurrently.
+	
+	*distributed-java maintains the TCP/lP protocol and is therefore suitable for distributed internet 
+	environments.
+
+
+Q4:what is an object?
+ANS: An object is an entity with state and behaviour,sure as a chair,bike,marker,pen,table,or car.it could be
+	intellectual or physical(tangible and intagible). the banking system is an illustration of an intangible
+	entity.
+
+Q5:what is a class?
+ANS: class is a collection of items with similar characteistics.it serves as a model or blueprint from which
+	things can be made.it makes sense as a whole.it cannot be bodily.
+
+
+Q6:explain aboute the java main()menthod?
+ANS: the main() is the starting point for JVM to start execution of a java program.without the main() mathod,
+	JVM will not execute the progrm.the syntax of the main() mathod is:public:it is an access specifier.we
+	should use a public keyword befoe the main() method so that JVM can identifiy the execute point of the 
+	progrm.
+
+	public static void main(string args[])
+
+	 *public:- an access specifier,that is.before calling the main() method,we need to use the public keyword to let
+		      the JVM know where the programme is actually being executed.before the main() method,if we use private,
+		      protected,and defualt,the JVM won't be able to see it.
+
+	*static:-you can make a method static by using the keyword static.we should call the main() method without
+	            creating an object.static methods are the method are the method which is invoked without creating the 
+	             objects,so we do notneed any object to call the main() method.
+
+	*void:-in java, every method has the return type.void keyword acknowledges the compiler that the main()
+		method does not return any value.
+
+	*main():-it is a default signature which is predefined in the JVM to execute a program line by line
+		      and end the execution after completion of this method .we can also overload the main() method .
+
+	*string args[]:-the main() method also accepts some data from the user. it accepts a group of strings, which is 
+			       called a string array.it is used to hold the commond line arguments in the form of string values.
+
+									main(string args[])
+
+				here,agrs[] is the array name,and it is of string type.it means that it can store a group of strings.renamber,
+				this array can store a group o f numbers but in the form of string only. values passed to the main() method 
+				are called arguments.these arguments are stored into an args[] array,so the name args[] is generally used 
+				for it.
+
+
+
+
+
+											*************Java variables and Data Type*************
+
+Q1. What is statically typed and Dynamically typed Programming Language?
+Ans: Statically typed: if the memory of the variable is given during the compilation time itself then such types of
+	programming languages are called as “Statically typed”.
+
+		Eg: C,C++,Java
+
+	Dynamically typed: If the memory of the variable is given during the execution time itself then such types of
+	programming languages are called as “dynamically typed”.
+
+		Eg: Python,PHP,JavaScript
+
+
+Q2. What is the variable in Java?
+Ans: A variable is the title of a reserved region allocated in memory. In other words, it may be referred to as the
+	name of a memory location.
+
+	It is a container that holds the value while the Java Program is executed.
+
+	Each variable should be given a unique name to indicate the storage area.
+
+	A variable is assigned with a data type(we will learn about it after this topic).
+
+	Syntax for Declaring a Variable:
+
+	Type variable_name [= value];
+
+	The variable_name is the name of a variable. We can initialise the variable by specifying an equal sign and a
+	value (initialization i.e. assigning an initial value, is optional). However, the compiler never assigns a default
+	value to an uninitialized local variable in Java.
+
+
+Q3. How To Assign a Value To Variable?
+Ans: We use assign operator (=) to assign a value to a variable. For Example,
+	number = 10;
+	flag = true;
+	name = "CodePumpkin";
+
+	We can assign a value to a variable any number of times in Java, but when we assign a new value to a
+	variable, the old value will be overwritten.
+	For example, in the first code snippet, we have first assigned a value 10 to the number and then modified its
+	value by performing the number+20 operation and assigning it back to the variable number by .
+
+Q4. What are Primitive Data types in Java?
+Ans: byte, short, int, long, float, double, char, String, boolean.
+
+Q5. What are the Identifiers in Java?
+Ans: Identifiers in Java are symbolic names used for identification. They can be a class name, variable name,
+	method name, package name, constant name, and more. However, In Java , There are some reserved words
+	that can not be used as an identifier.
+
+Q6.list the operator in java ?
+ANS: operators in java:
+	*Arithmetic operators
+	*Logical operators
+	*Relational operators
+	*Unery operators
+	*Bitwise operators
+	*assigment operators
+
+
+Q7.Explain about increment and decrement operators and give an examples ?
+ANS: increment and decrement operators in java are used to increase ro decrease the value by 1 for example,
+	increamental operator ++ i s useful to increase the existing variable value by (i=i+1).moreover,the decrement
+	operator -- is useful to decrease or subtract the current value by 1(i=i-1). the syntax of both increment and 
+	decrement operators in java programming to prefix or postfix is 
+
+		increament operator :++x or x++
+
+		decrement operator: --x or x-  
+
+

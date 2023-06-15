@@ -1,0 +1,138 @@
+							************ Git & GitHub Part - 2 ***********
+
+Q1.How to check  if git is available on your device ?
+
+ANS: To check if git is available on your device, you can follow these steps :
+
+	1.open a git software .
+
+	2. once you have the software open.type following command and press Enter:
+
+		git  --version
+
+	    this command check the vesion of git installed on your device. if git is installed, you will 
+	    see the vesion number displayed in the output. for example, it may look like:
+
+		git version 2.32.0
+	     
+	     if git is not installed,you may see and error massage stating that the command is not 
+	     rrecognized ot that git is not found.
+
+Q2.How to initalized a new git repository ?
+
+ANS: To initalized a new git repository,follow these steps :
+
+	1.open your Git software.
+	2.navigate to the directory where you want to create the git repository. you can
+	   use the 'cd' command to change directories .
+	for example, if you want to create the repository in your "Documents " folder :
+
+			d document
+
+	3.once you're in the desired directory, use the following command to initalize the git repository : 
+		
+			git init
+
+	this command will create a new, empty git repository in the current directory.
+
+
+Q3.How to tell git about your name or email ?
+
+ANS: To tell git about your name and email, you can use the following commands :
+
+		1. Open a git software .
+		2. Run the following commands, replacing "your name" and "your-email@example.com"with your actual
+		     name and email address.
+			
+			git config --global user.name "your name "
+			git config --global user.email "your-email@example.com"
+
+		3.verify that the configuration has been set correctly by running the following command .
+
+				git config --global --get user.name
+				git config --global --get user.email
+
+
+Q4.How to add a file to the staging area ?
+ANS :To add a file to the staging area in git, you can use the "git add " command here's how you can do it :
+ 
+	1. Open a git software 
+	2.Run the following command to add a specific file to the staging area :
+		
+		git add demo.doc 
+
+	3.If you want to add all the modified and new files in your repository to the staging area, you can use 
+	    the following command :
+
+			git add .
+
+	4.Once you have added the file(s) to the staging area, you can verify the status  of the files by running :
+
+			git status
+
+
+
+Q5.how to remove a file from the staging area ?
+ANS: To remove a file from the staging area in git, you can use  the "git reset " command. here's how you can do it.
+
+	1.Open a git software .
+	2. Run the following command to add a specific file to the staging area :
+
+		git reset demo.txt
+
+	3.if you want to remove all files from the staging area,you can use the following command :
+
+			git reset
+
+	4.Once you have removed the files from the staging area, you can verify the status of the files
+	     by running.
+
+			git status 
+
+
+Q6.how to make a commit ?
+ANS :To make a commit in git, you need to follow these steps :
+
+	1.Open a git software .
+	2.Run the following command to create a commit :
+
+		git commit -m "first commit "
+
+	3. you can use the 'git log ' command to view the commit history, including the 
+	    commint massages and their respective 
+
+		git log
+
+
+Q7.How to send your changes to a remote repository ?
+ANS :To send your changes to a remote repository, you can follow these general steps :
+
+		1.Open a git software 
+		2. Add the remote repository : if you haven't already, you need to add the remote repository
+		    as a remote in your local repository . this step is usually done once. you can use the following
+		    git coammnd.
+
+				git remote add origin <remote_repository_url>
+
+		3.Push your changes : once you have committed your changes and added the remote
+		    repository, you can push your changes to the remote repository.this step sends your
+	            committed changes to the remote repository. use the following git command.
+
+					git push origin <branch_name>
+
+Q8.What is different between clone and pull ?
+ANS :In the context of version control systems like Git, "clone" and "pull" are two different operations.
+
+Clone: When you clone a repository, you create a copy of the entire repository, including its entire history, branches, and tags. 
+	Cloning is typically done when you want to start working on a project from scratch or when you want to make a local copy of a
+ 	remote repository. It sets up a new directory on your local machine that contains all the files and commits from the remote 
+	repository.
+
+			Example: git clone <repository_url>
+
+Pull: Pulling, or more precisely, "git pull," is used to update your local repository with the latest changes from a remote repository. 
+	It combines two operations: fetching and merging. First, it fetches the latest commits and updates the remote branch references 
+	in your local repository, allowing you to see what has changed. Then, it automatically merges those changes into your current 
+	branch, incorporating the latest updates.
+
+			Example: git pull

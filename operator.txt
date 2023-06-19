@@ -1,0 +1,167 @@
+Q1. what are the conditional operatore in java ?
+
+ANS :they are used when a condition comprises more than one boolean expression.
+	for instance. if we want to print a number only if it is greater than 2 and less than 5,
+	then we will use conditional operators to combine the 2 expression. we have 3 type of 
+	conditional  opearators -logical - and ,logical -or and ternary operator.
+
+
+Logical - and operator(&&):- 
+it is used when we want the condition to be true if both the expressions are true.
+
+syntax :
+	if(condition - 1&& condition -2) {
+	statement;
+	}
+
+Logical -or operator (||) :- 
+this operator is used when we are satisfied as long as any one of the boolean expressions is evaluated as true.
+
+syntax : 
+		if(condition -1 || condition -2 ){
+		statement;
+		}
+
+ternary operator (?:) :
+it is a smaller version of the if - else statement. if the condition is true then the statement - 1 is executed else the 
+statement  -2 is executed .
+
+syntax :-
+
+		condition ? statement -1 : statement -2;
+
+
+Q2. what are the type of operators based on the  number of operands ?
+
+ANS: there are tree type of operators in java based on the number of operands. they are :
+
+	* Unary operator 
+
+	*Binary operator 
+	
+	* Ternary operator
+
+Q3. what is the use of switch case in java programming ?
+
+ANS : the switch case in java is used to select one of many code blocks for execution.
+
+Break statement : as java reaches a break  keyword,the control breaks. out of the switch block.the execution of code stops on encountering this 
+			   this keyword, and the case testing inside the block ends as the match is found. a lot of execution time can be saved because it 
+			    igoner the rest of the code's execution when there is a break. 
+			    default keyword : the keyword is used to specify the code executed when the expression does not match any test code.
+
+			   the switch case in java works like and if - else ladder , i.e., multiple condition can be checked at once . switch is provide
+			    with an expression that can be constand or literal expression that can be evaluated . the value of the expression is matched
+			    with each test case till a  match is found . if there is no match , the default keyword , if specified - the associated code executes.
+			    otherwise , the code specified for the matched test case is executed.
+
+for example : the code below uses the montly number to calculate the month name : 
+
+	public class main 
+{
+	public static void main(String [] args )
+	{
+		int month =4;
+		switch(month) 
+			{
+				case 1 : 
+					System.out.println("January");
+				case 2 :
+					System.out.println("February");
+				case 3 :
+					System.out.println("March");
+				case 4 :
+					System.out.println("April");
+				case 5 :
+					System.out.println("May");
+				case 6 :
+					System.out.println("June");
+				break;
+			              default : System.out.println(" In next half ");
+}
+	}
+			}
+
+
+Output : 
+	April
+
+
+
+Q4.what are the priority levels of arithmatic operator in java ?
+
+ANS : there are two priority levels of arithmatic operator in java . they are as follow :
+
+	* High priority * / % 
+
+	*Low priority + -
+
+
+Q5. what are the conditional statements and use of conditional statements in java ?
+
+ANS: * if to specify a block of code to be executed , if a specified condition is true 
+
+	* else to specify a block of code to be executed, if the some condition is false
+
+	*else if to specify a new condition to test, if the first condition is false
+
+	* switch to specify many alternative blocks of code to be executed
+
+Q6. what is the syntax of if - else statement ?
+
+ANS : if(condition1) 
+{
+	// block of code to be executed if condition1 is true 
+}
+else 
+{
+	// block of code to be executed if the condition1 is false 
+}
+
+
+Q7.what are the 3 type of iterative statements in java ?
+
+ANS : 3 type of iterative statements in java :
+
+	*for loop
+	*while loop
+	*do-while loop
+
+
+Q8. difference between for loop and do while loop ?
+
+ANS :    		For Loop						Do-While Loop
+		statement(s) is executed once		condition is checked after the statement
+		the condition is checked.			is executed.
+
+		it migth be that statement(s) 		statement(s) is executed at least once.
+		gets executed zero times.		
+
+		for the single statement,brackets		Brackets are always complusory.
+		are not compulsory.				
+
+		initialization may be outside or		intialization may be outside or withine the 
+		in a condition box.				loop.
+
+		for loop is entry controlled loop.		do-while is an exit controlled loop.
+
+		for(init;condition;iteration)			do {statement(s) ; }
+		{ statement(s) }					while (condition);
+
+
+
+Q9.write a program to print numbers from 1 to 10 .
+
+ANS :
+	public class printnumber
+{
+	public static void main(String[] args)
+	{
+		for(int i=1; i<=10; i++)
+			{
+				System.out.println(i);
+			}
+	}
+}
+
+

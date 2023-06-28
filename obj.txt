@@ -1,0 +1,63 @@
+						**************Object & Mathod (Oops) **********
+
+Q1.How to create an object in java ?
+ANS: there are several ways by which we can create object of a class in java as we all know a class 
+	provides the blueprint for object , you create an object from a class . this concetp is under-rated 
+	and somtimes proves to be beneficial as this concept is bypassed by many programmers and sometimes evern 
+	do ask from interview.
+
+
+
+methods : 
+there are many different ways to create object in java . the help of programs to  illustrate internal working by
+which we can create object in java.
+
+1.using new keyword
+
+2.using new instance
+
+3.using clone() method 
+
+4.using deserialization 
+
+5.using newinstance() method of  constructor class
+
+Q2.what is the use of a new keyword in java .
+ANS: the 'new' keyword in java is used to create an instance of an object . it allocates memory to an object an object and
+	returns a reference to the object created.it is used with a constructor to create an object.
+
+Q3. what are the differnt type of variables in java ?
+ANS:		*static variables 
+		*instance variables
+		*local veriable
+
+
+Q4. what is the difference between instance variables and local variables ?
+ANS: 			Instance variable							Local veriables
+		instance veriables are associated with		 	Local variables are declared and used within  	
+		an instance or object of a class 			 	a method, constructor, or block .
+		
+		each instance of a class has its own copy	 	they are temporary variable that hold data for a
+		of instance variables, which means that 	 	specific scope of block of code.
+		the values of these variables can vary from 
+		one instance to another.
+
+		instance variables are declared within a class	local variables are created when a method, constructor, 
+		but outside any method, constructor , block.		or block .
+
+		they are typically used to represent the state	Local variables are only accessible within  the scope in 
+		or attributes of an object.					which they are declared.
+
+
+
+Q5.in which area memery is allocated for instance variable and local veriable ?
+ANS: instance variables are allocated in the heap and local variables are allocated in the stack.
+
+
+
+Q6.what is method overloading ?
+ANS:Method overloading in java is a feature that allows a class to have multiple methods with the same name
+	but different parameters. the java compiler distinguishes these method by the number , type , and order of
+	parameters. overloading is used to provide multiply ways to call a method for different use cases, making code
+	more readable and reusable.
+

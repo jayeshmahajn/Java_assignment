@@ -1,0 +1,140 @@
+			************** Array & Method Practical Assignment ************
+
+Q1. write a program to demostrate method overloading with 3 different parameters. 
+ANS : 
+public class overloading
+{
+    public int add(int n1,int n2)    
+    {
+         int result=n1+n2;
+        return result;
+    }
+    public int add(int n1, int n2,int n3) 
+    {
+        int Result = n1+n2+n3;
+        return Result;
+    }
+public static void main(String[] args)
+    {
+        overloading  m = new overloading();
+        int result=m.add(2, 6);
+        int res=m.add(3, 6, 7); 		//method overloading 
+        System.out.println(result);     
+        System.out.println(res);
+    }
+}
+
+Output :	 7 
+		16
+
+Q2.write a program to create an object of an class which contain a method and call that class method in main method .
+
+ANS :
+
+public class multiplication
+{
+    public int mul(int n1,int n2)    
+    {
+         int res = n1*n2;
+        return res;
+    }
+    public static void main(String[] args)
+    {
+        multiplication o = new multiplication();
+        int res =o.mul(5, 6);   //creating an object of multiplication
+        System.out.println(res);   // calling the method on the object 
+    }
+}
+
+Output : 30
+
+
+Q3.write  a program to calculate the sum of all elements in an integer array ?
+
+ANS :
+
+class calc
+{
+    public int add (int num[])
+    {
+        int result =0;
+        for(int n:num)
+        {
+            result=result +n;
+         
+        }
+        return result;
+    }
+}
+    public class array
+    {
+
+    public static void main(String [] args)
+     {
+     calc obj=new calc();
+     int result=obj.add(new int[] {1,3,4,3});
+     System.out.println(result);
+     }
+    }
+
+
+
+Output : 11
+
+
+
+Q4.write a java program to find the index of a specific element in an integer array .
+
+ANS : 
+import java.util.Scanner;
+
+public class array_index
+{
+    public static void main(String[]args)
+    {
+        int a[] ={2,4,5,6,1};
+        Scanner s= new Scanner(System.in);
+        System.out.println(" please Enter any one of the element  from the array :");
+        int value = s.nextInt();
+        for(int i=0; i<a.length;i++)
+        {
+            if (a[i] == value )
+            {
+                System.out.println(i);
+            }
+        }
+    }    
+}
+
+
+Output : please Enter any one of the element  from the array :6
+	      3
+
+
+
+
+Q5. write a program to print an entire array ? 
+
+ ANS : 
+
+public class array_index
+{
+    public static void main(String[]args)
+    {
+        int a[] ={2,4,5,6,1};
+        for( int n: a)
+        {
+           System.out.println(n+" ");
+        }
+
+    }    
+}
+
+
+
+Output : 
+		2
+		4
+		5
+		6
+		1

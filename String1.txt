@@ -1,0 +1,46 @@
+					********* String Assignment 1 **********
+
+Q1. what is String in java ?
+
+ANS : String is a sequence of characters . But in java, string is an object that represents a sequence of
+	characters . the java.long.String class is used to create a string object.
+
+Q2. Type of string are ?
+
+ANS : in java String are classified into 2 types
+		* Mutable String
+		* Immutable String
+
+Q3. in how many ways can you create string object in java ?
+
+ANS : there are two ways to create string object in java . one is using a new operator and another 
+	one is using string literals. the object using the new operator are stored in the heap memory
+	and object created using String literals are stored in the string constant pool.
+
+	String str1 = new String("xyz"); // Creating string object using new operator 
+	String str2 = "xyz";		       // Creating string object using string literal
+
+Q4. what is a string constant pool ?
+
+ANS : string object are the most commonly used data object in java. Hence , java has a special
+	arrangment to store the string objects. string constant pool is one such arrangement.
+	string constant pool is the heap memory space dedicated to storing string object created with
+	string literals . in the string constant pool , there will be no two string object with the same content.
+
+	when you use a string literal to create a string , JVM first checks the object's conten . if there is an 
+	object . it doesn't create a new object . if the content differs from the existing objects, nonevent is 
+	generated.
+
+Q5. what do you mean by "mutable" and "immutable" objects ? 
+
+ANS : Immutable object are like constants . you can't modify them once they are created . they are
+	final in nature. whereas mutable object are concerned, you can perform modifications on them.
+
+Q6. where exactly is the string constant  pool located in the memory ?
+
+ANS : inside the heap memory.JVM reserves some part of the heap memory to store string object created using 
+	string litaral. in java , string are special .String types receive special treatment in java that other types do not.
+	for  example, to create the string objects , you have do not need to use the "new"  keyword. wheres to create other
+	types of java. this attention is wort the while, because thy string are used almost everywhere while developing any 
+	kind of application.
+

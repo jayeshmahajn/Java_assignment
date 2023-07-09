@@ -1,0 +1,92 @@
+			************ String Assignment 2 ************
+
+Q1. what is mutable string in java explain with an example ?
+
+ANS : The String class is immutable, which means that once a String object is created,
+	its value cannot be changed . however , there are other classes in java, such as String
+	StringBuilder and StringBuffer, which are mutable and can be used to manupulate strings.
+	Here's an example of using a mutable string in java with the 
+	
+	StringBuilder class :
+	StringBuilder sb = new Stringbuilder("Hellow");	
+	sb.append("world"); // append method adds the string "world" to the end of sb
+	System.out.println(sb); // print "Hellow World"
+
+	in this example,we create a StringBuilder object sb with an initial value of "Hello". we then use
+	the append method to add the string "world" to the end of sb.finally, we print the value of sb,
+	which is "Hello World".
+
+Q2.WAP to reverse a String 
+	Input : "PWSKILLS"
+	Output : "SLLIKSPW"	
+
+ANS : 
+	public class rev
+{
+    public static void main(String [] args)
+    {
+        String str = "PWSKILLS";    
+        
+        
+     StringBuilder reversedString = new StringBuilder();
+     reversedString.append(str);  
+     reversedString = reversedString.reverse();
+     System.out.println("The Original String is : " + str);
+     System.out.println( "The Reversed String is : " +reversedString.toString());
+   
+
+    }    
+}
+
+Output : The Original String is : PWSKILLS
+	      The Reversed String is : SLLIKSPW
+
+Q3. WAP to reverse a sentence while preserving the position
+	Input : "Think Twice"
+	Output : "Kniht eciwT "
+
+ANS : 
+public class rev
+{
+    public static void main(String [] args)
+    {
+
+    String str1 ="Think Twice";
+    String str2 ="";
+    String sar[] = str1.split(" ");
+    for(String elm : sar)
+    {
+        for(int i = elm.length()-1;i>=0; i--)
+        {
+            str2=str2+elm.charAt(i);
+        }
+        str2=str2 +" ";
+    }
+    System.out.println(str2);
+    }    
+}
+
+Output : knihT eciwT
+
+Q4.WAP to start a String Alphabetically
+
+ANS : 
+import java.util.Arrays;
+
+public class rev
+{
+    static void SortString(String str)
+    {
+        char arr[] = str.toCharArray();
+        Arrays.sort(arr);
+        System.out.println(arr);
+    }
+    public static void main(String [] args)
+    {
+    String a = "aaaazzzzbbbdddccc";
+    SortString(a);
+    
+    }    
+}
+
+Output : aaaabbbdddccczzzz

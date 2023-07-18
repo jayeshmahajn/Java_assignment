@@ -1,0 +1,196 @@
+			*********** Encapsulation Assignment ***********
+
+Q1. What is Encapsulation in java ? why is it called data hiding ?
+
+ANS : The process of binding data  and corresponding methods(behaviour)
+	together into a single until is called encapsulation in java.
+	in other words , encapsulation is a programming technique that binds the 
+	class members (variables and methods ) together and prevents them from being
+	accessed by other classes,thereby we can keep variables and methods safe from outside
+	interference and misuse. if a field is declared private in the class then it cannot be accessed by anyone 
+	outside the class and hides the fields within the class. therefor, Encapsulation is also called data hiding.
+
+Q2.What are the important features of Encapsulation ?
+
+ANS : Encapsulation is a key concept in object - oriented programming (Oops) that involves combining data and 
+	method within a single unit known as a class. here are some important features of encapsulation .
+
+* Data Hiding : Encapsulation hides the internal details of an object from the outside world. this means that the data
+			stored within an object can only be accessed though the methods provided by that object. this helps to 
+			prevent accidental modification of data and makes the code more robust .
+
+* Abstraction : Encapsulation allows us to focus on the essential features of an object , while
+			hiding the implementation details. this is achieved by defining public methods that provide
+			a simple and consistent interface for interacting with the object. 
+
+* Access Control : Encapsulation allows us to control the access to the data and methods of an object we can specify which methods and
+			  data members are public, private, or protected. private data and methods can only be accessed from within the class,while
+			  protected data and methods can be accessed from within the class and its subclasses.
+
+* Data integrity : Encapsulation ensures that the data stored within an object is consistent and valid .this is achieved by enforcing constraints on the
+			  data through methods , which prevents the data from being modified in an inconsistent or incorrect manner.
+
+*Modularity : Encapsulation allows us to create modular code, which makes it easier to manage and maintain complex systems.by encapsulation ralated data
+		     and methods within a single class , we can create a self - contained until that can be reused and extended in defferent parts of the code.
+
+
+
+Q3. What are getter and setter methods in java Explain with an example 
+
+ANS : Gatter and Setter methods , also know as accessor and mutator methods, are used in java to access and modify the private members of a class,
+	rspectively. They provide alayer of abstraction that allows us to control the access to the data and enforce constraints on the data as needed .
+	here's an example to illustate how getter and setter methods work :
+
+Example : 
+ class student1
+{   
+     private int rollNo;
+     private String name;
+    public void setRollNo(int rollNo)
+    {
+         this.rollNo = rollNo;
+    }    
+    public void setName(String name) 
+    {
+        this.name = name;
+    } 
+    public int getRollNo()
+    {
+        return rollNo;
+    } 
+    public String getName()
+    {
+        return name;
+    } 
+   
+    public void seedata()
+    {
+        System.out.println(name + " " + rollNo );
+    }
+}
+
+public class student
+{    
+public static void main(String[]args)
+    {
+    student1 d = new student1();
+        d.setName("jayesh");
+        d.setRollNo(21);
+        String name = d.getName();
+        System.out.println(name);
+        int age = d.getRollNo();
+        System.out.print(age + " ");
+        d.seedata();
+
+
+    }
+}
+
+
+Q4.what is the use of this keyword explain with an example 
+
+ANS : this keyword refers to the current object or instance of a class . it is used to differentiate between instance variable and patameters or local 
+	variable that have the same name, and to pass the current object as a parameter to other method or constructors ,heres an example to illustrate
+	the  use of the this keywords :
+
+Example : 
+
+public class this_key
+{
+    private String name;
+    private int age;
+      
+    public void person(String name, int age)
+    {
+        this.name= name;
+        this.age = age;
+    
+    }
+    public void show()
+    { 
+
+        System.out.println("Name : " + this.name);
+        System.out.println("Age : "+ this.age);
+        
+    } 
+    
+
+    public static void main(String [] args ) 
+    {
+        this_key d = new this_key();
+        d.person("Rahul",21);
+        d.show();
+            
+    }
+}
+
+
+Output : Name : Rahul
+	      Age : 21
+
+
+Q5.What is the advantage  of Encapsulation
+
+ANS : there are the following advantages of encapsulation in java.
+they are as follows : 
+
+* The enacapsulation code is more flexible and easy to change with new requirements.
+*it prevents the other classes from accessing the private fields.
+*Encapsulation allows modifying implemented code without breaking other code who have implemented the code.
+*it keeps the data and codes safe from exaternal inheritance. thus, Encapsulation helps to achieve security.
+*it improves the maintainbility of the application.
+
+Q6. How to achieve encapsulation in java ? give an example.
+
+ANS : Encapsulation is achieved in java by declaring the instance variables of a class as private, and providing public getter and setter 
+	methods to access and modify the values of these variables. this allows us to control access to the data and ensure that it can only 
+	be modified through the methods of the class, rather than directly accessing the instance variables from outside the class .
+
+here's an example to illustrate how enacapsulation can be achieved in java :
+
+import javax.xml.crypto.KeySelector.Purpose;
+
+public class BankAccount 
+{
+public static void main(String []args)
+    {
+       private String AcNo;
+       private double bal;
+        public BankAccount(String AcNo, double bal)
+        {
+            this.AcNo =AcNo;
+            this.bal = bal;
+        }
+        public String getAcNo()
+        {
+            return AcNo;
+        }
+        public void setAcNo(String AcNo)
+        {
+            this.AcNo = AcNo;
+        }
+        public double getbal()
+        {
+            return bal;
+        }
+        public void deposit(double amt)
+        {
+            bal += amt;
+        }
+        public void withdraw(double amt)
+        {
+            if(amt<= bal)
+            {
+                bal -= amt;
+            }
+            else 
+            {
+                System.out.println("Insufficient found");
+            }
+        }
+    }    
+     
+}
+
+
+			  

@@ -1,0 +1,202 @@
+				*************** Encapsulation  Practical Assignment *************
+
+Q1. create aclass that keeps track of the number of instances created . implement a static variable and method to accomplish this.
+
+Ans : 
+class StaticInstance
+{
+    private static int inst =0;
+
+    public StaticInstance()
+    {
+        inst++;
+    }
+    public static int getinst()
+    {
+        return inst;
+    }
+}
+
+public class instance 
+{
+    public static void main(String [] args) 
+    {
+        StaticInstance si1 = new StaticInstance();
+        StaticInstance si2 = new StaticInstance();
+        StaticInstance si3 = new StaticInstance();
+        System.out.println("Number of instances created : " + StaticInstance.getinst());
+    }
+}
+
+
+Output : Number of instances created : 3
+
+Q2.Write a program and create a constructor with parameters and initialise the variable using a constructor.
+
+Ans : 
+import java.net.PortUnreachableException;
+import java.util.jar.Attributes.Name;
+
+class constructor 
+{
+    private String name;
+    private int age;
+    public void constructor()
+    {
+        System.out.println("This is a normal Constructor");
+        name ="jayesh";
+        age = 21;
+    }
+    public void constructor(String name , int age)
+    {
+        System.out.println("This is a parameter Contructor");
+        this.name= name;
+        this.age=age;
+      
+    }
+    public void disp()
+    {
+        System.out.println(name);
+       System.out.println(age);
+    }
+}
+
+
+public class constr 
+{
+    public static void main(String [] args)    
+    {
+        constructor c1  = new constructor();
+        c1.constructor();
+        c1.disp();
+        constructor c2 = new constructor();
+        c2.constructor("Ritesh",19);
+       c2.disp();
+    }
+}
+
+Output : 
+This is a normal Constructor
+jayesh
+21
+This is a parameter Contructor
+Ritesh
+19
+
+
+Q3.use the private keyword for a veriable and use setter and getter methods initialis and print  the value
+
+Ans : 
+ class SetAndGet
+{
+    private String nm;
+    private int age;
+
+    public void SetAndGet(String nm , int age)
+    {
+        this.nm=nm;
+        this.age=age;
+    }
+    public String getnm()
+    {
+        return nm;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+
+}
+
+ public class SetGet 
+{
+    public static void main(String [] args)    
+    {
+        SetAndGet up = new SetAndGet();
+        up.SetAndGet("jayesh",21);
+        System.out.println("Name : " + up.getnm());
+        System.out.println("Age : "+ up.getAge());
+
+    }
+}
+
+
+Output : 
+Name : jayesh
+Age : 21
+
+
+Q4.Write a program to call method without crating an object of class .
+
+Ans : 
+public class noobject 
+{
+     static int a=5;
+    static int b=9;
+    public static void multiply()
+    {
+        System.out.println("The multiplion of a and b :" + a*b);   
+    }
+    public static void main(String []args) 
+    {
+        noobject.multiply();
+    }   
+}
+
+
+Output : The multiplion of a and b :45
+
+
+Q5.Write a program which has static block and constructor overloading initialis variables using constructors and print it.
+
+Ans : 
+public class Static 
+{   
+    static String name;
+    static int age;
+
+    public  Static()
+    {
+        System.out.println("No argument block");
+    }
+    public  Static(String name)
+    {
+        super();
+        this.name=name;
+    }
+    public  Static(int age)
+    {
+        super();
+        this.age=age;
+    }
+    public  Static(String name,int age)
+    {
+        super();
+        this.name=name;
+        this.age=age;
+    }
+    public String disply()
+    {
+        return "Static [Name :"+name + ", Age : "+ age+"]";
+    }
+    static
+    {
+        System.out.println("Static block");
+    }
+
+    public static void main(String [] args) 
+    {
+        Static s = new Static(21);
+        System.out.println(s.age);
+        Static s2 = new Static("Ram");
+        System.out.println(s2.name);
+        Static s3 = new Static("Sham",20);
+        System.out.println(s3.disply());
+    }    
+}
+
+Output : 
+Static block
+21
+Ram
+Static [Name :Sham,Age : 20]

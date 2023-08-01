@@ -1,0 +1,81 @@
+			************** Exception Handling Assignment **************
+
+
+Q1. Exaple different types of error in java .
+
+Ans : In any programming language we categorise error into 2 types
+	1.Syntax Error / Compile Time Mistakes
+	2. Logical Error / Run Time Mistakes
+
+Syntax error / CompilTime Mistakes
+
+* it refers to the mistakes done by the programmer with respect to syntax.
+*These mistakes are identified by the compiler, so we say it as "CompileTimeMistakes".
+
+Logical error / RunTime Mistakes
+
+* it refers to the mistakes done by the programmer in terms of writing a logic
+* These mistakes are identified by JVM during the execution of a program, so we say it as "RunTimeMistakes ".
+
+Q2. What is an Exception in java.
+
+Ans : An Unwanted / expected event that disturbs the normal flow of execution of a program is called is " Exception handiling".
+*The main object of exception handiling is to handle the exception.
+*it is available for graceful termination of program.
+
+Q3.How can you handle exceptions in java ? Explain with an example.
+
+Ans : Exception handiling can be performed using :
+
+Try : the set of statements or code which requires monitoring for an exception is kept under this block.
+Catch : this block catches all the exception that were trapped in the try block.
+Finally : this block is always performed irrespective of the catching of exceptions in the try or catch block.
+
+Example : 
+import java.util.Scanner;
+
+public class exception2
+{
+    public static void main(String[] args) 
+    {
+        int num =0;
+        Scanner sc = new Scanner(System.in);    
+        try
+        {
+        num = sc.nextInt();
+        }
+        catch(Exception e )
+        {
+            sc.close();
+            System.out.println("plase try only Nomber value.");
+        }
+        System.out.println(num);
+
+    }    
+}
+
+
+Q4. why do we need exception handiling in java ?
+
+Ans : if there is no try and catch block while an exception occurs, the program will terminate . exception handiling ensures the smooth
+	running of a program without program termination.
+
+Q5. What is the different between exception and error in java ?
+
+Ans : Error typically happen while an application is running. for instance , out of memory Error occurs in case the JVM runs out of memory
+	On the hand, exceptions are mainly caused by the application. for instance, null pointer Exception happens when an app tries to get through
+	a null object.
+
+Q6. Name the different types of exception in java ?
+
+Ans : Based on handiling by JVM , there are typically two types of exception in java .
+
+Checked : Occur during the compilaion . here, the compiler checks whether the exception is handled and throws an error accoringly.
+
+Unchecked : Occur during program exception. these are not detectable during the compilation process.
+
+Q7. Can we just try instead of finally and catch blocks  ? Give an Example ?
+
+Ans : No, doing so wil show a compilation error. catch or finally block must always accompany try block. we can remove either finally
+block or catch block , but never both.
+

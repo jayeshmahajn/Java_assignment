@@ -1,0 +1,42 @@
+			************ Lambda Assignment ************
+
+Q1.What is the lambda expression of java 8 ? 
+
+Ans : As its name suggests it's an expression which allows you to write more succint code in java 8.
+	for example (a,b)-> a+b is a lambda expression (look fot that arrow ->).
+
+Which is equal to following code.
+public int value(int a, int b){
+	return a+b;
+}
+
+it's also called an annonymous function because you are essentially writing the code you write in function but
+without name.
+
+Q2.can you pass lambda expressions to a method ? when ?
+
+Ans : Yes ,you can pass a lambda expression to a method provided it is expecting a function interface.for
+	example, if a method is accepting a runable,comparable or comparator then you can pass a lambda
+	expression to it because all these are functional interfaces in java.
+
+Q3. What is the functional interface in java 8 ?
+
+Ans : A functional interface in java 8 is an inteface with a single abstract method . for example, comparator
+	which has just one abstract method called compare() or Runnable which has just one abstract method called
+	run().there are many more general purpose functional interfaces introduced in JDK on java.until.function
+	pakage.they are also annotated with @FunctionalInterface but that's optional.
+
+Q4. What is the benefit of lambda expressions in java 8 ?
+
+Ans : The main benfit of lambda expression in java 8 is that now it's easier to pass a code block to a method .
+	Earlier,the only way to do this was wrapping the code inside an Annonymous class, which requires a lot of 
+	boilerplate code.
+
+Q5. Is it mandatory for a lambda expression to have parameters ? 
+
+Ans : No, it's not mandatory for a lambda expression to have parameters , you can define a lambda expression
+	without parameters as shown below : 
+
+	()-> System.out.println("lambda without parameter");
+you can pass this code to any method which accepts a functional interface .
+

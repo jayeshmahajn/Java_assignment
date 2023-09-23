@@ -1,0 +1,135 @@
+			***************  MultiThreading ***************
+
+Q1. What do you mean by multitreading ? why is it important ?
+
+Ans : Multitreading means multiple treads and is considered one of the most important features of java . as 
+the name suggests , it is the ability of a cpu to execute multiple threads independently at the same time but
+share the process resourase sumultaneously . its main purpose is to provide sumlteneous execution of multiple 
+threads to untilze the cpu time as much as possible. it is a java feature where one can subdivide the specific program
+into two or more threads to make the execution of the program fast and easy.
+
+Q2. What are benefits of using Multithreading ?
+
+Ans : There are various benefits of Multithreading as gives below : 
+
+* Allow the program to run contiously even if a part of it is blocked.
+* Allows to write effective programs that untilze maximum cpu time
+* Improves the responsiveness of complex applications or programs.
+* Increase use of cpu resources and reduce costs of maintaenance.
+* saves time and parallelism tasks. 
+* if an exception occurs in a single thread, it will not affect other threads as threads as are independent .
+
+Q3. What is Thread in java ?
+
+Ans : Treads are basically the lightweight and smallest unit of procissing that can be managed independently by a scheduler. 
+Treads are referred to as parts of a process that simply let a program execute efficiently with other parts or threads of the process
+at the same time. using threads , one can perform complicated tasks in the easiest way. it is considered the simplest way to take 
+advantage of multiple cpus available in a machine. they share the common address space and are independent of each other.
+
+Q4. what are the two ways of implementing thread in java ?
+
+Ans : There are basically two ways of implementing treads in java as given below : 
+Extending the Treadf class
+
+Example : 
+
+public class multithreading extends Tread
+{
+    public void run()
+    {
+        System.out.println("My tread is running state.");
+    }
+    public static void main(String[] args) 
+    {
+        multithreading obj = new multithreading();
+        obj.start();    
+    }
+}
+
+Implementing Runnable interface in java
+
+Example : 
+public class multithreading extends Tread
+{
+    public void run()
+    {
+        System.out.println("My tread is running state.");
+    }
+    public static void main(String[] args) 
+    {
+        multithreading obj = new multithreading();
+	Tread Obj = new Tread(obj);
+        obj.start();    
+    }
+}
+
+
+Q5. What's the difference between thread and process ?
+
+Ans : Tread : it simple refers to the smallest units of the  particuler process. it has the ability to excute different
+part (referred to as thread ) of the program at the same time . 
+process : it simple refers to a program that is in execution i.e, an active program . A process can be handled
+using PCB ( process control block) . 
+
+Q6.How can we create deamon threads  ? 
+
+Ans  : we can  create demon thread in java  using the thread class  setDaemon(true ) . it is used to mark the current thred as daemon thread or 
+user thread. isDaemon() method is generally used  to check whether the current thread is daemon or not if the thread is a daemon , it will return true
+otherwise it returns false.
+
+Example : 
+public class DaemonThread extends Thread  
+{
+    public DaemonThread(String name)
+    {
+        super(name);
+    }
+    public void run()
+    {
+        if(Thread.currentThread().isDaemon())
+        {
+            System.out.println(getName() + "is Daemon thread");
+        }
+        else 
+        {
+            System.out.println(getName() + "is user thread");
+        }
+    }
+    public static void main(String[] args) 
+    {
+        DaemonThread t1 = new DaemonThread("t1");    
+        DaemonThread t2= new DaemonThread("t2");    
+        DaemonThread t3 = new DaemonThread("t3");    
+
+        t1.setDaemon(true);
+        t1.start();
+        t2.start();
+        t3.setDaemon(true);
+        t3.start();
+    }
+}
+
+Q7.What are the wait() and  sleep() methos ?
+
+Ans : wait() : As the name suggests , it is a non-static method that causes the current thread to wait and go to
+sleep until some other threads call the notify() or notify() or notifyAll() method for the object's monitor (lock).it simply
+reseases the lock and is mostly used for inter-thread communication. it is defined in the object class, and should only be 
+called from a synchronized contex.
+
+Example : 
+Synchronized(monitor)
+{
+	monitor.wait(); 
+}
+
+sleep() : As the name suggests it is a static method that pauses or stop the execution of the current thread for
+same specified period. it doesn't release the lock while waiting and is mostly used to introduce pause on execution.
+it is defined in thread class, and no need to call from a synchronized context.
+
+Example : 
+synchronized(monitor)
+{
+	Thread.sleep(10000;
+	interrupt() 
+}
+

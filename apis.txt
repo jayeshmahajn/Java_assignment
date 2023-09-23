@@ -1,0 +1,155 @@
+		************* APIs and Annotation *************
+
+Q1. program to disply current data and time in java 
+
+Ans : 
+public class DateAndTime 
+{
+    public static void main(String[] args) 
+   {
+        
+        java.util.Date dt = new java.util.Date();
+        dt.getTime();
+        System.out.println(dt);
+    }    
+}
+
+Output : 
+		Sun Sep 03 14:51:10 IST 2023
+
+Q2.write a program to convert a date to a string in the format "MM/dd/yy" .
+
+Ans : 
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class DateAndTime 
+{
+    public static void main(String[] args) {
+        
+        LocalDate dt = LocalDate.of(2023,9,3);
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        String fd = dt.format(f);
+
+        System.out.println(fd);
+    }    
+}
+
+Output :
+		09/03/2023
+
+
+Q3. What is the difference between collection and streams ? explain with an example ?
+
+Ans : 			Streams								Collections
+it doesn't store data, it operates on the-------------->	it store/holds all the data that the data structure currently has in a  
+source data structure i.e collection				paraculer data structure like set,list or map.
+
+they use functional interface like lambda------------>	they don't use functional interfaces.
+which makes it a good fit for programming
+languges.
+
+java Streams are consumable i.e; to travers---------->	they are non-consumable i.e; can be traversable multiple times witout 
+the stream, it need to be created every time.		creating it again
+
+java Stream support both sequential and------------>	it support parallel processing and paralllel proccessing can be very  
+parallel proccessing. 							helpful in achieving high performance.
+
+
+Example : Collection 
+
+
+
+import java.util.*;
+
+public class collection1 
+{
+    public static void main(String[] args) 
+    {
+        ArrayList al = new ArrayList();
+        al.add(100);
+        al.add(200);
+        al.add(300);   
+        al.add(500); 
+        System.out.println(al);
+    }    
+}
+
+Output : 
+[100, 200, 300, 500]
+
+
+Example : Streams 
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class stream 
+{
+    public static void main(String[] args) 
+    {
+        List<String> cl = new ArrayList<>();
+        cl.add("Red");
+        cl.add("Orange");
+        cl.add("Black");
+        cl.stream().sorted().forEach(
+            System.out::println);
+
+    }    
+}
+
+
+Output : 
+Black
+Orange
+Red
+
+
+
+Q4. What is enum in java ? explain with an example ?
+Ans : We can use enum to define a group of named constants. 
+Enums are used to represent a collection of related constant that have a common purpose. Each constant in an 
+enum is an instance of the enum type . and they are typically defined as public static final fields.
+
+Example : 
+enum week
+{
+    Mon, Tue, Wed , Thu, Fri, Sat,Sun;
+}
+public class enumm 
+{
+    public static void main(String[] args) 
+    {
+        week w =week.Mon;
+        System.out.println(w);
+
+        week wr[] = week.values();
+        for(week w1 : wr)
+        {
+            System.out.println(w1 + " : " + w1.ordinal());
+        }
+
+    }    
+}
+
+
+Output : 
+Mon : 0
+Tue : 1
+Wed : 2
+Thu : 3
+Fri : 4
+Sat : 5
+Sun : 6
+
+Q5.What are in built annotations in java ?
+
+Ans : @Override
+	@Deprecated
+	@SuppressWarnings
+	@Functionallnterface
+	@Retention
+	@Target
+	@Documented
+	@Inherited

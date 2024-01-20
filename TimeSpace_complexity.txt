@@ -1,0 +1,141 @@
+				************ Time and Space Complexity Assignment ***************
+
+Q1.Analyze the time complexity of the following java code and suggest a way to improve it
+
+Ans : The time complexity of this code is O(n^2) as it use nested loops, where the outer loop runs n times and the inner
+loop runs i times where i varies from 1 to n.
+
+The total number of operations performed can be calculated by summing the total number of operations in each iteration
+of the outer loop. the inner loop will run i times on the i -th iteration of the outer loop. so the number of operations is (1+2+3+...+n)
+which is n(n+1)/2 , which is O(n^2).
+
+one way to improve the time complexity of the code is to use a mathematical formula to find the sum insted of using nested loops.
+
+
+Q2.Find the value of T(2) for the recurrence T(n) =3T(n-1)+12n, given that T(O)=5.
+
+Ans : given T(n) = 3T(n-1) +12n
+
+Substututing the values in the relation :|
+T(1) =3(0) +12
+=> T(1) =15 +12=27
+T(2) =3T(1) +12 *2
+=>T(2) =3*27 +24=81 +24
+Hence T(2) =105
+
+Q3.give a recurrence relation, solve it using a substitution mehtod. relation : T(n) = T(n-1)+c.
+
+Ans :
+T(n) = T(n-1) + c
+T(n-1) = T(n-2)+c
+T(n-2)=T(n-3)+c
+|
+|
+T(2)=T(1)+c
+
+Adding all above equations
+
+T(n)=T(1) +cn
+T(n) =k+cn
+Therefore, T(n) <=cn
+Hence ,T(n)=O(n).
+
+Q4. given a recurrence relation:
+T(n) =16T(n/4) +n2longn
+find the time complexity of this relation using the master theorem.
+
+Ans:
+a= 16
+b=4
+k=2
+p=1
+bk=42=16
+a=bk
+p>-1
+T(n)=0(nlogab*logp+1n)
+T(n)=0(nlog164*log1+1n)=0(n1/2log2n)
+
+Q5. solve the following recurrence relation using recursion tree method
+	T(n)=2T(n/2)+n
+
+Ans :
+Step 1: Draw the Recursion Tree
+
+
+
+Step-02:
+ 
+
+Determine cost of each level-
+
+Cost of level-0 = n
+Cost of level-1 = n/2 + n/2 = n
+Cost of level-2 = n/4 + n/4 + n/4 + n/4 = n and so on.
+
+Step-03:
+ 
+
+Determine total number of levels in the recursion tree-
+
+Size of sub-problem at level-0 = n/20
+Size of sub-problem at level-1 = n/21
+Size of sub-problem at level-2 = n/22
+
+Step-04:
+ 
+
+Determine number of nodes in the last level-
+
+Level-0 has 20 nodes i.e. 1 node
+Level-1 has 21 nodes i.e. 2 nodes
+Level-2 has 22 nodes i.e. 4 nodes
+
+Step-05:
+ 
+Determine cost of last level-
+
+Cost of last level = n x T(1) = θ(n)
+
+Step-06:
+= n x log2n + θ (n)
+
+= nlog2n + θ (n)
+
+= θ (nlog2n)
+
+ 
+Q6.T(n)=2T(n/2)+k , solve using recurrence tree method.
+
+Ans: 
+Step 1: Draw the Recursion Tree
+
+
+
+Step 2: Calculate the Height of the Tree
+n = 2^k
+
+log(n) = log(2^k)
+log(n) = k * log(2)
+k = log(n) / log(2)
+k = log(n) base 2
+
+Step 3: Calculate the cost at each level
+
+Cost at Level-0 = K, two sub-problems are merged.
+Cost at Level-1 = K + K = 2*K, two sub-problems are merged two times.
+Cost at Level-2 = K + K + K + K = 4*K, two sub-problems are merged four times. and so on...
+
+Step 4: Calculate the number of nodes at each level
+Level-0 have 1 (2^0) node
+Level-1 have 2 (2^1) nodes
+Level-2 have 4 (2^2) nodes
+Level-3 have 8 (2^3) nodes
+
+Step 5: Sum up the cost of all the levels
+
+The total cost can be written as,
+Total Cost = Cost of all levels except last level + Cost of last level
+Total Cost = Cost for level-0 + Cost for level-1 + Cost for level-2 +.... + Cost for level-log(n) + Cost for last level
+
+
+

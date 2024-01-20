@@ -1,0 +1,233 @@
+			********* 2D Array Assignment Question ********
+
+Q1.take m and n input from the user and m*n integer inputs from user and print the following
+ number of positive numbers
+number of negative numbers
+number of odd numbers
+number of even numbers
+number of 0.
+ input :
+1 2 -3 4
+0 0 -4 2
+1 -1 2 3
+-4 -5 -7 0
+
+
+Ans :
+import java.util.Scanner;
+
+public class NumberCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows (m): ");
+        int m = scanner.nextInt();
+
+        System.out.print("Enter the number of columns (n): ");
+        int n = scanner.nextInt();
+
+        int positiveCount = 0;
+        int negativeCount = 0;
+        int oddCount = 0;
+        int evenCount = 0;
+        int zeroCount = 0;
+
+        System.out.println("Enter " + (m * n) + " integers:");
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int num = scanner.nextInt();
+
+                if (num > 0) {
+                    positiveCount++;
+                    if (num % 2 == 0) {
+                        evenCount++;
+                    } else {
+                        oddCount++;
+                    }
+                } else if (num < 0) {
+                    negativeCount++;
+                    if (num % 2 == 0) {
+                        evenCount++;
+                    } else {
+                        oddCount++;
+                    }
+                } else {
+                    zeroCount++;
+                }
+            }
+        }
+
+        System.out.println("Number of positive numbers: " + positiveCount);
+        System.out.println("Number of negative numbers: " + negativeCount);
+        System.out.println("Number of odd numbers: " + oddCount);
+        System.out.println("Number of even numbers: " + evenCount);
+        System.out.println("Number of zeroes: " + zeroCount);
+
+        scanner.close();
+    }
+}
+
+
+Q2.write a program to print the elements above the secondary diagonal in a user inputted square matrix
+
+input :
+1 2 3
+ 4 5 6
+7 8 9
+
+Ans :
+import java.util.Scanner;
+
+public class AboveSecondaryDiagonal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the size of the square matrix:");
+        int n = scanner.nextInt();
+
+        int[][] matrix = new int[n][n];
+
+        System.out.println("Enter the elements of the matrix:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println("Elements above the secondary diagonal:");
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if ((i + j) < n - 1) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+
+Q3. write a program to print the elements of both the diagonals in a user inputted square matrix in any order.
+
+input :
+1 2 3
+4 5 6
+7 8 9
+
+Ans : 
+import java.util.Scanner;
+
+public class DiagonalElements {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the size of the square matrix: ");
+        int size = scanner.nextInt();
+        
+        int[][] matrix = new int[size][size];
+        
+        System.out.println("Enter the elements of the square matrix:");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        
+        System.out.println("Elements of the main diagonal:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(matrix[i][i] + " ");
+        }
+        
+        System.out.println("\nElements of the secondary diagonal:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(matrix[i][size - 1 - i] + " ");
+        }
+    }
+}
+
+Q4. write a program to find the largest element of a given 2D array of integers
+
+input : 
+1 2 4 0
+2 5 7 -1
+4 2 6 9
+
+Ans:
+public class LargestElementInArray {
+    public static void main(String[] args) {
+        int[][] array = {
+            {1, 2, 4, 0},
+            {2, 5, 7, -1},
+            {4, 2, 6, 9}
+        };
+
+        int largest = findLargestElement(array);
+        System.out.println("The largest element in the array is: " + largest);
+    }
+
+    public static int findLargestElement(int[][] arr) {
+        int largest = Integer.MIN_VALUE;
+
+        for (int[] row : arr) {
+            for (int value : row) {
+                if (value > largest) {
+                    largest = value;
+                }
+            }
+        }
+
+        return largest;
+    }
+}
+
+Q5. write a function which accepts a 2d array of integers and its size as arguments and displays the element
+the elements of middle row and the element middle column .printing can be done in any order
+[assuming the 2d  array to be a square matrix with odd dimensions i.e. 3x3, 5x5,7x7 etc..]
+
+input :
+1 2 3 4 5
+3 4 5 6 7
+7 6 5 4 3
+8 7 6 5 4
+1 2 37 8 0
+
+Ans :
+public class MiddleElements {
+
+    public static void displayMiddleElements(int[][] array) {
+        int size = array.length;
+
+        // Finding the middle row and column indices
+        int middleRow = size / 2;
+        int middleColumn = size / 2;
+
+        // Displaying the middle row elements
+        System.out.println("Middle Row Elements:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[middleRow][i] + " ");
+        }
+        System.out.println();
+
+        // Displaying the middle column elements
+        System.out.println("Middle Column Elements:");
+        for (int i = 0; i < size; i++) {
+            System.out.println(array[i][middleColumn]);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = {
+                {1, 2, 3, 4, 5},
+                {3, 4, 5, 6, 7},
+                {7, 6, 5, 4, 3},
+                {8, 7, 6, 5, 4},
+                {1, 2, 37, 8, 0}
+        };
+
+        displayMiddleElements(arr);
+    }
+}
+
